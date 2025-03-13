@@ -1,10 +1,10 @@
 @extends('layouts.app')
-
+@section('title', 'SI-RETA | Hasil Rekomendasi')
 @section('content')
 <div class="container">
     <div class="card">
         <div class="card-header bg-success text-white">
-            <h4>Hasil Rekomendasi Kunjungan</h4>
+            <h4>Hasil Rekomendasi </h4>
         </div>
         <div class="card-body">
             <table class="table table-bordered">

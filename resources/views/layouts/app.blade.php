@@ -14,16 +14,6 @@
     </div>
 
     <script src="{{ asset('/js/bootstrap.bundle.min.js') }}"></script>
-
-    @if(session('success'))
-    <script>
-        Swal.fire({
-            title: "Berhasil!",
-            text: "{{ session('success') }}",
-            icon: "success",
-            confirmButtonText: "OK"
-        });
-    </script>
-    @endif
+    <script src="{{ asset('/js/notifikasi.js') }}"></script>
 </body>
 </html>

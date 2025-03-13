@@ -23,12 +23,14 @@
 
                 <label>Jenis Kelamin:</label>
                 <select name="jenis_kelamin" class="form-control" required>
+                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
 
                 <label>Keperluan:</label>
                 <select name="keperluan" class="form-control" required>
+                    <option value="" disabled selected>Pilih Keperluan</option>
                     <option value="Rapat">Rapat</option>
                     <option value="Koordinasi">Koordinasi</option>
                     <option value="Kunjungan">Kunjungan</option>
@@ -37,7 +39,7 @@
                 </select>
 
                 <label>Rincian Keperluan:</label>
-                <textarea name="rincian" class="form-control" required></textarea>
+                <textarea name="rincian" id="rincian_keperluan" class="form-control" placeholder="Rincian Keperluan"></textarea>
 
                 <button type="submit" class="btn btn-primary mt-3">Dapatkan Rekomendasi</button>
             </form>
