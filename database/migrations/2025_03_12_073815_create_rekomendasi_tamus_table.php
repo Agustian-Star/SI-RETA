@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->text('rincian');
             $table->string('bertemu');
             $table->string('lokasi');
-            $table->time('waktu'); // Menggunakan 'time' untuk menyimpan waktu saja, atau 'datetime' untuk menyimpan tanggal dan waktu
+            $table->string('waktu'); // Menggunakan 'time' untuk menyimpan waktu saja, atau 'datetime' untuk menyimpan tanggal dan waktu
             $table->timestamps();
         });
     }

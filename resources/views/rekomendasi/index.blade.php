@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'SI-RETA | Form Rekomendasi Tamu')
+
 @section('content')
 <div class="container">
     <div class="card">

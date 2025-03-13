@@ -13,7 +13,7 @@
                 <tr><th>Rincian Keperluan</th><td>{{ $data->rincian ?? '-' }}</td></tr>
                 <tr><th>Bertemu dengan</th><td>{{ $data->bertemu }}</td></tr>
                 <tr><th>Lokasi</th><td>{{ $data->lokasi }}</td></tr>
-                <tr><th>Waktu</th><td>{{ $data->hari }}, {{ $data->jam_buka }} - {{ $data->jam_tutup }}</td></tr>
+                <tr><th>Waktu Kunjungan</th><td>{{ $data->waktu ?? '-' }}</td></tr>
             </table>
             <a href="{{ route('rekomendasi.index') }}" class="btn btn-secondary">Kembali</a>
         </div>

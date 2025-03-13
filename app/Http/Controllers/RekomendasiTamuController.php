@@ -28,10 +28,14 @@ class RekomendasiTamuController extends Controller
         'rincian'       => $request->rincian,
         'bertemu'       => $rekomendasi['bertemu'],
         'lokasi'        => $rekomendasi['lokasi'],
-        'hari'          => $rekomendasi['hari'],       // Hari yang direkomendasikan
-        'jam_buka'      => $rekomendasi['waktu']['jam_buka'],  // Jam buka
-        'jam_tutup'     => $rekomendasi['waktu']['jam_tutup'], // Jam tutup
+        'waktu' => isset($rekomendasi['waktu'])
+    ? ($rekomendasi['hari'] . ' ' .
+       date('H:i', strtotime($rekomendasi['waktu']['jam_buka'])) . '-' .
+       date('H:i', strtotime($rekomendasi['waktu']['jam_tutup'])))
+    : '-',
+
     ]);
+
 
     // Redirect ke halaman hasil rekomendasi
     return redirect()->route('rekomendasi.show', $tamu->id);
