@@ -9,8 +9,14 @@ class RekomendasiTamu extends Model {
     use HasFactory;
 
     protected $fillable = [
-        'nama', 'alamat', 'no_telp', 'jenis_kelamin',
-        'keperluan', 'rincian_keperluan',
-        'rekomendasi_tujuan', 'rekomendasi_waktu', 'rekomendasi_orang'
+        'nama',
+        'alamat',
+        'no_telp',
+        'jenis_kelamin',
+        'keperluan',
+        'rincian', // Sesuai dengan perubahan di migration
+        'bertemu', // Sesuai dengan perubahan di migration
+        'lokasi',  // Sesuai dengan perubahan di migration
+        'waktu',   // Sesuai dengan perubahan di migration
     ];
 }

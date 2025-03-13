@@ -1,20 +1,22 @@
-<!-- resources/views/rekomendasi/show.blade.php -->
 @extends('layouts.app')
 
-@section('title', 'Detail Rekomendasi')
-
 @section('content')
-<div class="card shadow-sm">
-    <div class="card-header bg-primary text-white">
-        <h4>Detail Rekomendasi</h4>
-    </div>
-    <div class="card-body">
-        <p><strong>Nama:</strong> {{ $rekomendasi->nama }}</p>
-        <p><strong>Keperluan:</strong> {{ $rekomendasi->keperluan }}</p>
-        <p><strong>Tujuan:</strong> {{ $rekomendasi->rekomendasi_tujuan }}</p>
-        <p><strong>Waktu:</strong> {{ $rekomendasi->rekomendasi_waktu }}</p>
-        <p><strong>Orang:</strong> {{ $rekomendasi->rekomendasi_orang }}</p>
-        <a href="{{ route('rekomendasi.index') }}" class="btn btn-secondary">Kembali</a>
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h4>Hasil Rekomendasi Kunjungan</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr><th>Nama</th><td>{{ $data->nama }}</td></tr>
+                <tr><th>Keperluan</th><td>{{ $data->keperluan }}</td></tr>
+                <tr><th>Rincian Keperluan</th><td>{{ $data->rincian ?? '-' }}</td></tr>
+                <tr><th>Bertemu dengan</th><td>{{ $data->bertemu }}</td></tr>
+                <tr><th>Lokasi</th><td>{{ $data->lokasi }}</td></tr>
+                <tr><th>Waktu</th><td>{{ $data->hari }}, {{ $data->jam_buka }} - {{ $data->jam_tutup }}</td></tr>
+            </table>
+            <a href="{{ route('rekomendasi.index') }}" class="btn btn-secondary">Kembali</a>
+        </div>
     </div>
 </div>
 @endsection
