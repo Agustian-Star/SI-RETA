@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'SI-RETA | Form Rekomendasi Tamu')
+@section('title', 'SI-RETA | Rekomendasi Tamu')
 
 @section('content')
 <div class="container">
@@ -13,23 +13,23 @@
                 @csrf
 
                 <label>Nama:</label>
-                <input type="text" name="nama" class="form-control" required>
+                <input type="text" id="nama" name="nama" class="form-control">
 
                 <label>Alamat:</label>
-                <textarea name="alamat" class="form-control" required></textarea>
+                <textarea name="alamat" id="alamat" class="form-control"></textarea>
 
                 <label>No. Telepon:</label>
-                <input type="text" name="no_telp" class="form-control" required>
+                <input type="text" id="no_telp" name="no_telp" class="form-control">
 
                 <label>Jenis Kelamin:</label>
-                <select name="jenis_kelamin" class="form-control" required>
+                <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
                     <option value="" disabled selected>Pilih Jenis Kelamin</option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
 
                 <label>Keperluan:</label>
-                <select name="keperluan" class="form-control" required>
+                <select name="keperluan" id="keperluan" class="form-control">
                     <option value="" disabled selected>Pilih Keperluan</option>
                     <option value="Rapat">Rapat</option>
                     <option value="Koordinasi">Koordinasi</option>
@@ -39,9 +39,9 @@
                 </select>
 
                 <label>Rincian Keperluan:</label>
-                <textarea name="rincian" id="rincian_keperluan" class="form-control" placeholder="Rincian Keperluan"></textarea>
+                <textarea name="rincian" id="rincian_keperluan" class="form-control"></textarea>
 
-                <button type="submit" class="btn btn-primary mt-3">Dapatkan Rekomendasi</button>
+                <button type="submit" class="btn btn-primary mt-3">Kirim Formulir</button>
             </form>
         </div>
     </div>
